@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(pdftotext /Users/efron/Downloads/Flashpoint-Q1-2026-Whitepaper-Updated.pdf -)",
+      "Bash(python3 -m pip install pypdf -q)",
+      "Bash(python3 -c \"from pypdf import PdfReader; r=PdfReader\\('/Users/efron/Downloads/Flashpoint-Q1-2026-Whitepaper-Updated.pdf'\\); [print\\(f'PAGE {i+1}\\\\n', p.extract_text\\(\\)\\) for i,p in enumerate\\(r.pages\\)]\")",
+      "mcp__6e0f2342-5188-4083-b46c-d628575adbe2__read_file_content",
+      "Bash(pdftotext /Users/efron/Downloads/Flashpoint_Global_Brand_Identity.pdf -layout -)",
+      "Bash(cp \"/Users/efron/Downloads/Flashpoint jpg.jpg\" /Users/efron/flashpoint-global-web/assets/logo.jpg)",
+      "Bash(cp \"/Users/efron/Downloads/Flashpoint icon.jpg\" /Users/efron/flashpoint-global-web/assets/icon.jpg)",
+      "Bash(cp \"/Users/efron/Downloads/Flashpoint vertical.jpg\" /Users/efron/flashpoint-global-web/assets/logo-vertical.jpg)",
+      "Bash(python3 -)",
+      "Bash(pip3 install *)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:upnext.world)"
+    ]
+  }
+}
