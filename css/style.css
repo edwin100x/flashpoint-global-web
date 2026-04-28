@@ -59,6 +59,19 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
+/* Screen-reader-only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -574,8 +587,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .moments__btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border: 1px solid var(--border);
   background: none;
   color: var(--slate-lt);
@@ -673,6 +686,13 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   padding: 0;
   transition: background 0.2s;
+  /* Expand hit area to 44px without changing visual size */
+  position: relative;
+}
+.moments__dot::after {
+  content: '';
+  position: absolute;
+  inset: -19px;
 }
 
 .moments__dot.active { background: var(--cyan); }
@@ -808,7 +828,7 @@ a { color: inherit; text-decoration: none; }
 
 .pov__card-label {
   font-family: var(--font-head);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1023,7 +1043,7 @@ a { color: inherit; text-decoration: none; }
   margin-top: 20px;
   font-family: var(--font-head);
   font-size: 13px;
-  color: var(--slate);
+  color: var(--slate-lt);
 }
 
 .cta-section__email {
