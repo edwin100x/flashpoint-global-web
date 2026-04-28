@@ -1023,8 +1023,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .team__photo-wrap {
-  width: 88px;
-  height: 88px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 24px;
@@ -1035,7 +1035,7 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 12%;
 }
 
 .team__name {
