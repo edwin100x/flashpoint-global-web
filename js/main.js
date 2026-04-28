@@ -13,6 +13,7 @@ function initCarousel() {
   cards.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'moments__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to moment ' + (i + 1));
     dot.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(dot);
   });
@@ -80,6 +81,7 @@ function initTestimonials() {
   cards.forEach((_, i) => {
     const dot = document.createElement('button');
     dot.className = 'moments__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
     dot.addEventListener('click', () => goTo(i));
     dotsContainer.appendChild(dot);
   });

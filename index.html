@@ -10,15 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="/" class="nav__logo">
-        <img src="assets/mark.png" alt="" class="nav__mark" />
+        <img src="assets/mark.png" alt="" class="nav__mark" aria-hidden="true" />
         <span class="nav__wordmark">Flashpoint <em>Global</em></span>
       </a>
       <div class="nav__right">
@@ -27,6 +29,8 @@
       </div>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero">
@@ -163,19 +167,19 @@
       </div>
       <div class="who__cards">
         <div class="who__card">
-          <h4>Late seed to growth stage</h4>
+          <h3>Late seed to growth stage</h3>
           <p>The stage where personal narrative has the highest leverage on fundraising, recruiting, and market positioning.</p>
         </div>
         <div class="who__card">
-          <h4>Entering new markets</h4>
+          <h3>Entering new markets</h3>
           <p>Companies that need credibility and access in an ecosystem where they're not yet known.</p>
         </div>
         <div class="who__card">
-          <h4>Preparing to raise or scale revenue</h4>
+          <h3>Preparing to raise or scale revenue</h3>
           <p>Teams where the next conversation could change the trajectory, and every introduction needs to count.</p>
         </div>
         <div class="who__card">
-          <h4>Leaders who want category authority</h4>
+          <h3>Leaders who want category authority</h3>
           <p>Founders building companies and narratives that define what their category looks like in the years ahead.</p>
         </div>
       </div>
@@ -195,7 +199,7 @@
       </div>
     </div>
     <div class="container moments__track-wrap">
-      <div class="moments__track" id="moments-track">
+      <div class="moments__track" id="moments-track" role="region" aria-label="Moments of leverage">
 
         <div class="moment">
           <span class="moment__marker">01</span>
@@ -249,7 +253,7 @@
     <div class="container">
       <p class="eyebrow eyebrow--light">What founders are saying</p>
       <h2 class="section-title">The proof is in the room.</h2>
-      <div class="testimonials__slider" id="testimonials-slider">
+      <div class="testimonials__slider" id="testimonials-slider" aria-live="polite" aria-atomic="true" role="region" aria-label="Founder testimonials">
 
         <figure class="testimonial" data-index="0">
           <blockquote class="testimonial__quote">
@@ -412,11 +416,13 @@
     </div>
   </section>
 
+  </main><!-- /#main -->
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="assets/mark.png" alt="" class="footer__mark" />
+        <img src="assets/mark.png" alt="" class="footer__mark" aria-hidden="true" />
         <span class="footer__wordmark">Flashpoint <em>Global</em></span>
       </div>
       <p class="footer__tagline">Turning founder signal into capital, customers, and category leadership.</p>
@@ -428,7 +434,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
   <script src="https://embed.typeform.com/next/embed.js"></script>
 </body>
 </html>
