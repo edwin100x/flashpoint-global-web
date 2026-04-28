@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 <body>
 
@@ -184,61 +184,64 @@
 
   <!-- MOMENTS OF LEVERAGE -->
   <section class="moments" id="moments">
-    <div class="container">
-      <p class="eyebrow">When founders find us</p>
-      <h2 class="section-title">The moment usually<br />looks like one of these.</h2>
-      <div class="moments__grid">
+    <div class="container moments__header">
+      <div>
+        <p class="eyebrow">When founders find us</p>
+        <h2 class="section-title">The moment usually<br />looks like one of these.</h2>
+      </div>
+      <div class="moments__nav">
+        <button class="moments__btn" id="moments-prev" aria-label="Previous">&#8592;</button>
+        <button class="moments__btn" id="moments-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+    <div class="container moments__track-wrap">
+      <div class="moments__track" id="moments-track">
 
         <div class="moment">
           <span class="moment__marker">01</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You're heading into a raise.</h3>
-            <p class="moment__desc">Your product is strong. Your narrative isn't tight. Investors are asking questions you don't have a clean answer to yet.</p>
-          </div>
+          <h3 class="moment__title">You have a strong point of view. It's not reaching the market.</h3>
+          <p class="moment__desc">You know what you believe and where the category is going. It's living in your head, not in the market. Your competitors are filling that space.</p>
         </div>
 
         <div class="moment">
           <span class="moment__marker">02</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You've been doing podcasts and events, but nothing is converting.</h3>
-            <p class="moment__desc">You're getting in rooms and on shows. The conversations are good. But they're not becoming capital, customers, or the right introductions.</p>
-          </div>
+          <h3 class="moment__title">You know your ICP. You can't get in front of them.</h3>
+          <p class="moment__desc">You know exactly who needs to hear this. The path to those buyers, partners, or investors isn't clear, warm, or moving fast enough.</p>
         </div>
 
         <div class="moment">
           <span class="moment__marker">03</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You're writing a book.</h3>
-            <p class="moment__desc">You have something to say. But the book exists in isolation, disconnected from your category play, your fundraising narrative, and your market positioning.</p>
-          </div>
+          <h3 class="moment__title">You're in rooms and on shows. Nothing is converting.</h3>
+          <p class="moment__desc">Podcasts, events, panels. The conversations are good. They're not becoming capital, customers, or the right introductions.</p>
         </div>
 
         <div class="moment">
           <span class="moment__marker">04</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You're building community but it's not connected to capital.</h3>
-            <p class="moment__desc">You have an audience. You have trust. But there's no bridge between the community you're building and the investors, partners, or customers who should be in it.</p>
-          </div>
+          <h3 class="moment__title">You're heading into a raise.</h3>
+          <p class="moment__desc">Your product is strong. Your narrative isn't tight. Investors are asking questions you don't have a clean answer to yet.</p>
         </div>
 
         <div class="moment">
           <span class="moment__marker">05</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You have a point of view, but no system for making it visible.</h3>
-            <p class="moment__desc">You know what you believe. You know where the category is going. But it's living in your head, not in the market. And your competitors are filling that space.</p>
-          </div>
+          <h3 class="moment__title">You're writing a book.</h3>
+          <p class="moment__desc">You have something to say. The book exists in isolation, disconnected from your category play, your fundraising narrative, and your market positioning.</p>
         </div>
 
         <div class="moment">
           <span class="moment__marker">06</span>
-          <div class="moment__body">
-            <h3 class="moment__title">You're entering a new market.</h3>
-            <p class="moment__desc">No one knows you here. You need credibility, context, and the right introductions before you can sell, raise, or hire.</p>
-          </div>
+          <h3 class="moment__title">You're building community. It's not connected to capital.</h3>
+          <p class="moment__desc">You have an audience and trust. There's no bridge between the community you're building and the investors, partners, or customers who should be in it.</p>
+        </div>
+
+        <div class="moment">
+          <span class="moment__marker">07</span>
+          <h3 class="moment__title">You're entering a new market.</h3>
+          <p class="moment__desc">No one knows you here. You need credibility, context, and the right introductions before you can sell, raise, or hire.</p>
         </div>
 
       </div>
     </div>
+    <div class="moments__dots" id="moments-dots"></div>
   </section>
 
   <!-- POV ARTICLES -->
@@ -358,7 +361,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
   <script src="https://embed.typeform.com/next/embed.js"></script>
 </body>
 </html>

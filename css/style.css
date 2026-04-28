@@ -527,26 +527,77 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── MOMENTS OF LEVERAGE ───────────────────────────────────── */
 .moments {
-  padding: var(--section-pad) 0;
+  padding: var(--section-pad) 0 60px;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 
-.moments .section-title { margin-bottom: 52px; }
-
-.moments__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
+.moments__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 44px;
 }
+
+.moments__header .section-title { margin-bottom: 0; }
+
+.moments__nav {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.moments__btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--slate-lt);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moments__btn:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.moments__btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.moments__track-wrap {
+  overflow: hidden;
+  padding: 0;
+}
+
+.moments__track {
+  display: flex;
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  padding-right: 32px;
+}
+
+.moments__track::-webkit-scrollbar { display: none; }
 
 .moment {
-  display: flex;
-  gap: 28px;
+  flex: 0 0 340px;
+  scroll-snap-align: start;
   padding: 36px 32px;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
-  align-items: flex-start;
+  border-radius: 2px;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
@@ -561,8 +612,8 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--cyan);
-  flex-shrink: 0;
-  padding-top: 3px;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .moment__title {
@@ -570,8 +621,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 15px;
   font-weight: 700;
   color: var(--white);
-  line-height: 1.4;
-  margin-bottom: 10px;
+  line-height: 1.45;
+  margin-bottom: 12px;
 }
 
 .moment__desc {
@@ -581,8 +632,30 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.8;
 }
 
+.moments__dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.moments__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.moments__dot.active { background: var(--cyan); }
+
 @media (max-width: 900px) {
-  .moments__grid { grid-template-columns: 1fr; }
+  .moments__track-wrap { margin-left: 0; padding-left: 20px; }
+  .moment { flex: 0 0 280px; }
+  .moments__header { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
 
 /* ─── POV ARTICLES ──────────────────────────────────────────── */
