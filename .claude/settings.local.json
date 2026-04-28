@@ -15,7 +15,12 @@
       "mcp__Claude_Preview__preview_start",
       "WebFetch(domain:upnext.world)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(python3)",
+      "Bash(curl -L \"https://futurenarrator.com/assets/images/image09.jpg?v=077df9fe\" -o /Users/efron/flashpoint-global-web/assets/team-paul.jpg)",
+      "Bash(curl -L \"https://futurenarrator.com/assets/images/image08.jpg?v=077df9fe\" -o /tmp/team-check.jpg)",
+      "Bash(cp /tmp/team-check.jpg /Users/efron/flashpoint-global-web/assets/team-paul.jpg)",
+      "Bash(curl -L \"https://futurenarrator.com/assets/images/image09.jpg?v=077df9fe\" -o /Users/efron/flashpoint-global-web/assets/team-edwin-new.jpg)"
     ]
   }
 }
