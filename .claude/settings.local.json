@@ -13,7 +13,9 @@
       "Bash(python3 -)",
       "Bash(pip3 install *)",
       "mcp__Claude_Preview__preview_start",
-      "WebFetch(domain:upnext.world)"
+      "WebFetch(domain:upnext.world)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
