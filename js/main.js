@@ -128,3 +128,15 @@ function initTestimonials() {
 }
 
 initTestimonials();
+
+// WhatsApp float — reveal after 50% scroll
+(function () {
+  const btn = document.querySelector('.whatsapp-float');
+  if (!btn) return;
+  function checkScroll() {
+    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    btn.classList.toggle('visible', pct >= 0.5);
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+}());

@@ -1339,7 +1339,15 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
 }
 .whatsapp-float:hover,
 .whatsapp-float:focus-visible {
