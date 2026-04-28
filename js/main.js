@@ -64,3 +64,58 @@ document.querySelectorAll('.stat-card, .step, .who__card, .problem__list li').fo
 });
 
 initCarousel();
+
+// Testimonials slider
+function initTestimonials() {
+  const slider = document.getElementById('testimonials-slider');
+  const prevBtn = document.getElementById('testimonials-prev');
+  const nextBtn = document.getElementById('testimonials-next');
+  const dotsContainer = document.getElementById('testimonials-dots');
+  if (!slider) return;
+
+  const cards = slider.querySelectorAll('.testimonial');
+  let current = 0;
+
+  // Build dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'moments__dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index) {
+    cards[current].classList.remove('active');
+    current = (index + cards.length) % cards.length;
+    cards[current].classList.add('active');
+    dotsContainer.querySelectorAll('.moments__dot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === cards.length - 1;
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  // Click card to advance
+  slider.addEventListener('click', () => {
+    if (current < cards.length - 1) goTo(current + 1);
+  });
+
+  // Swipe support
+  let touchStartX = 0;
+  slider.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  slider.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+
+  // Init first card
+  cards[0].classList.add('active');
+  prevBtn.disabled = true;
+}
+
+initTestimonials();
