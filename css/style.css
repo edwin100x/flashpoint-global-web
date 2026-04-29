@@ -1253,7 +1253,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-head);
   font-size: 13px;
   font-weight: 500;
-  color: var(--slate-lt);
+  color: var(--white);
   line-height: 1.6;
   margin-top: 12px;
   letter-spacing: 0.02em;
