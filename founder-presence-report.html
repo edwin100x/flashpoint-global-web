@@ -393,15 +393,13 @@
     /* Methodology */
     .methodology {
       background: var(--navy-mid);
-      padding: 60px 0;
+      padding: 48px 0;
       border-top: 1px solid rgba(255,255,255,0.06);
     }
-    .methodology p {
-      font-family: var(--font-body);
-      font-size: 14px;
-      color: var(--slate-lt);
-      line-height: 1.8;
-      max-width: 720px;
+    .methodology__inner {
+      display: flex;
+      gap: 40px;
+      align-items: baseline;
     }
     .methodology h3 {
       font-family: var(--font-head);
@@ -410,7 +408,14 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--cyan);
-      margin-bottom: 16px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .methodology p {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--slate-lt);
+      line-height: 1.75;
     }
 
     /* Responsive */
@@ -746,8 +751,10 @@
   <!-- METHODOLOGY -->
   <section class="methodology">
     <div class="container">
-      <h3>Methodology Note</h3>
-      <p>This study was conducted by Flashpoint Global between January and April 2026. 96 total survey responses were collected; 92 completed responses were included in the analysis. The survey was distributed via direct email outreach sequences to founders and startup ecosystem networks. All data is self-reported. Given the sample size of 92 completed responses, findings are directional rather than statistically representative of the global founder population, and should be interpreted as an inaugural benchmark to be validated and expanded in subsequent years.</p>
+      <div class="methodology__inner">
+        <h3>Methodology</h3>
+        <p>Conducted by Flashpoint Global, January–April 2026. 96 responses collected; 92 included in analysis. Distributed via direct email outreach to founders and startup ecosystem networks. All data is self-reported. Findings are directional rather than statistically representative of the global founder population, and should be interpreted as an inaugural benchmark to be validated in subsequent years.</p>
+      </div>
     </div>
   </section>
 
