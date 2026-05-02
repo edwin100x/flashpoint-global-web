@@ -20,11 +20,15 @@
 
     /* Hero */
     .report-hero {
-      padding: 80px 0 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       background: var(--navy);
       position: relative;
       overflow: hidden;
+      padding: 80px 0;
     }
     .report-hero::before {
       content: '';
@@ -590,7 +594,7 @@
       <p class="eyebrow hero-fade">Q1 2026 Benchmark Report</p>
       <h1 class="hero-fade">Founder Presence<br />in the Age of AI</h1>
       <p class="report-hero__sub hero-fade">
-        Primary research by <a href="https://flashpoint.global" style="color:var(--cyan);text-decoration:none;">Flashpoint Global</a> across 92 founders and startup leaders — establishing the first baseline metrics for founder presence health.
+        Primary research by <a href="https://flashpoint.global" style="color:var(--cyan);text-decoration:underline;text-underline-offset:3px;">Flashpoint Global</a> across 92 founders and startup leaders — establishing the first baseline metrics for founder presence health.
       </p>
       <div class="report-hero__meta hero-fade" aria-label="Report at a glance">
         <div class="report-hero__meta-item">
@@ -815,7 +819,7 @@
     <div class="container">
       <p class="eyebrow">The 2026 Benchmark</p>
       <h2 class="section-title" id="benchmark-heading">Where founders stand today.</h2>
-      <div class="benchmark__table-wrap">
+      <div class="benchmark__table-wrap" tabindex="0" role="region" aria-label="Benchmark data table">
         <table class="benchmark__table">
           <thead>
             <tr>
