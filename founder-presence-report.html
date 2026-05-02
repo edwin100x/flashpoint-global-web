@@ -21,6 +21,7 @@
     /* Hero */
     .report-hero {
       padding: 80px 0 100px;
+      text-align: center;
       background: var(--navy);
       position: relative;
       overflow: hidden;
@@ -36,25 +37,39 @@
     .report-hero .eyebrow { margin-bottom: 16px; }
     .report-hero h1 {
       font-family: var(--font-head);
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
       font-weight: 700;
       color: var(--white);
       line-height: 1.15;
-      margin-bottom: 24px;
-      max-width: 820px;
+      margin: 0 auto 24px;
     }
+
+    /* Centre all section headings on this page */
+    .signals__label,
+    .findings__intro .eyebrow,
+    .findings__intro .section-title,
+    .findings__intro p,
+    .benchmark .eyebrow,
+    .benchmark .section-title,
+    .recs .eyebrow,
+    .recs .section-title,
+    .report-cta .eyebrow {
+      text-align: center;
+    }
+    .findings__intro p { margin-left: auto; margin-right: auto; }
     .report-hero__sub {
       font-family: var(--font-body);
       font-size: 18px;
       color: var(--slate-lt);
       line-height: 1.8;
       max-width: 640px;
-      margin-bottom: 40px;
+      margin: 0 auto 40px;
     }
     .report-hero__meta {
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
+      justify-content: center;
       margin-bottom: 48px;
     }
     .report-hero__meta-item {
@@ -82,6 +97,123 @@
       gap: 16px;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
+    }
+    .report-hero__inner {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 80px;
+      align-items: center;
+    }
+    .report-hero__signals {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .report-hero__signal-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+    .report-hero__signal-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 80px;
+    }
+    .report-hero__signal-text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--slate-lt);
+      line-height: 1.6;
+    }
+    .report-hero__signal-text strong {
+      display: block;
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 48px;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+    .scroll-indicator.hidden { opacity: 0; pointer-events: none; }
+    .scroll-indicator__line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, var(--cyan));
+      animation: scrollPulse 1.8s ease-in-out infinite;
+    }
+    .scroll-indicator__label {
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate-lt);
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.8); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ── Scroll-triggered fade-up ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Hero load animations ── */
+    .hero-fade {
+      opacity: 0;
+      animation: heroFadeIn 0.7s ease forwards;
+    }
+    .hero-fade:nth-child(1) { animation-delay: 0.1s; }
+    .hero-fade:nth-child(2) { animation-delay: 0.25s; }
+    .hero-fade:nth-child(3) { animation-delay: 0.4s; }
+    .hero-fade:nth-child(4) { animation-delay: 0.55s; }
+    .hero-fade:nth-child(5) { animation-delay: 0.7s; }
+    .report-hero__signals .report-hero__signal-card:nth-child(1) {
+      opacity: 0; animation: heroFadeIn 0.7s ease 0.35s forwards;
+    }
+    .report-hero__signals .report-hero__signal-card:nth-child(2) {
+      opacity: 0; animation: heroFadeIn 0.7s ease 0.5s forwards;
+    }
+    .report-hero__signals .report-hero__signal-card:nth-child(3) {
+      opacity: 0; animation: heroFadeIn 0.7s ease 0.65s forwards;
+    }
+    @keyframes heroFadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .report-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+      .report-hero__signals { flex-direction: row; flex-wrap: wrap; }
+      .report-hero__signal-card { flex: 1; min-width: 200px; }
     }
 
     /* Signals */
@@ -455,12 +587,12 @@
   <!-- HERO -->
   <section class="report-hero">
     <div class="container">
-      <p class="eyebrow">Q1 2026 Benchmark Report</p>
-      <h1>Founder Presence<br />in the Age of AI</h1>
-      <p class="report-hero__sub">
-        Primary research by <a href="https://flashpoint.global" style="color:var(--cyan);text-decoration:none;">Flashpoint Global</a> across 92 founders and startup leaders establishing the first baseline metrics for founder presence health: the belief gap, the AI voice gap, and the narrative deficit separating market-shapers from market-followers.
+      <p class="eyebrow hero-fade">Q1 2026 Benchmark Report</p>
+      <h1 class="hero-fade">Founder Presence<br />in the Age of AI</h1>
+      <p class="report-hero__sub hero-fade">
+        Primary research by <a href="https://flashpoint.global" style="color:var(--cyan);text-decoration:none;">Flashpoint Global</a> across 92 founders and startup leaders — establishing the first baseline metrics for founder presence health.
       </p>
-      <div class="report-hero__meta" aria-label="Report at a glance">
+      <div class="report-hero__meta hero-fade" aria-label="Report at a glance">
         <div class="report-hero__meta-item">
           <span class="report-hero__meta-num">92</span>
           <span class="report-hero__meta-label">Founders Surveyed</span>
@@ -475,14 +607,18 @@
         </div>
         <div class="report-hero__meta-item">
           <span class="report-hero__meta-num">15</span>
-          <span class="report-hero__meta-label">Page Full Report</span>
+          <span class="report-hero__meta-label">Page Report</span>
         </div>
       </div>
-      <div class="report-hero__ctas">
+      <div class="report-hero__ctas hero-fade">
         <button class="btn btn--primary" data-tf-popup="NHj9H3q3" data-tf-iframe-props="title=Flashpoint Founder Presence Report" data-tf-medium="snippet">
           Download the Full Report
         </button>
         <a href="#findings" class="btn btn--ghost">Read the Findings ↓</a>
+      </div>
+      <div class="scroll-indicator" id="scroll-indicator" aria-hidden="true">
+        <div class="scroll-indicator__line"></div>
+        <span class="scroll-indicator__label">Scroll</span>
       </div>
     </div>
   </section>
@@ -490,7 +626,7 @@
   <!-- 3 DEFINING SIGNALS -->
   <section class="signals" aria-labelledby="signals-heading">
     <div class="container">
-      <p class="signals__label" id="signals-heading">Three Defining Signals</p>
+      <p class="eyebrow" id="signals-heading" style="text-align:center;margin-bottom:40px;">Three Defining Signals</p>
       <div class="signals__grid">
         <div class="signal-card">
           <div class="signal-card__num">81.5%</div>
@@ -778,5 +914,37 @@
 
   <script src="js/main.js?v=7"></script>
   <script src="https://embed.typeform.com/next/embed.js"></script>
+  <script>
+    // Scroll indicator — hide after first scroll
+    (function () {
+      const indicator = document.getElementById('scroll-indicator');
+      if (!indicator) return;
+      window.addEventListener('scroll', function hide() {
+        if (window.scrollY > 60) {
+          indicator.classList.add('hidden');
+          window.removeEventListener('scroll', hide);
+        }
+      }, { passive: true });
+    }());
+
+    // Scroll-triggered reveal
+    (function () {
+      const targets = document.querySelectorAll(
+        '.finding, .signal-card, .rec-card, .archetype-card, .benchmark__table, .report-cta, .methodology__inner'
+      );
+      targets.forEach(el => el.classList.add('reveal'));
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+      targets.forEach(el => io.observe(el));
+    }());
+  </script>
 </body>
 </html>
