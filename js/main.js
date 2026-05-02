@@ -59,7 +59,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.stat-card, .step, .who__card, .problem__list li').forEach(el => {
+document.querySelectorAll(
+  '.stat-card, .step, .who__card, .problem__list li, ' +
+  '.section-title, .section-intro, .testimonial, .moment, ' +
+  '.research__stat, .fn__stat, .cta-block'
+).forEach(el => {
   el.classList.add('fade-up');
   observer.observe(el);
 });
