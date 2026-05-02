@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder Presence in the Age of AI — Q1 2026 Benchmark Report | Flashpoint Global</title>
+  <meta name="description" content="Primary research across 92 founders and startup leaders revealing the belief gap, AI voice gap, and narrative deficit shaping founder presence in 2026. Free to read. Full report available." />
+  <meta property="og:title" content="Founder Presence in the Age of AI — Q1 2026 Benchmark Report" />
+  <meta property="og:description" content="81.5% of founders use AI for content. 58.7% say it doesn't sound like them. Only 32.6% publish future-facing narrative. Read the full findings." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://flashpoint.global/founder-presence-report" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
+  <style>
+    /* ── Report page overrides & extensions ── */
+
+    /* Hero */
+    .report-hero {
+      padding: 140px 0 100px;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    .report-hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(100,220,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .report-hero .eyebrow { margin-bottom: 16px; }
+    .report-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 820px;
+    }
+    .report-hero__sub {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: var(--slate-lt);
+      line-height: 1.8;
+      max-width: 640px;
+      margin-bottom: 40px;
+    }
+    .report-hero__meta {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .report-hero__meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .report-hero__meta-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .report-hero__meta-label {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .report-hero__ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Signals */
+    .signals {
+      background: var(--navy-mid);
+      padding: 80px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .signals__label {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 40px;
+    }
+    .signals__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .signal-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 36px 28px;
+    }
+    .signal-card__num {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .signal-card__title {
+      font-family: var(--font-head);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+    .signal-card__body {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--slate-lt);
+      line-height: 1.7;
+    }
+
+    /* Findings */
+    .findings {
+      padding: 100px 0;
+      background: var(--navy);
+    }
+    .findings__intro {
+      margin-bottom: 72px;
+    }
+    .findings__intro p {
+      font-family: var(--font-body);
+      font-size: 17px;
+      color: var(--slate-lt);
+      line-height: 1.85;
+      max-width: 680px;
+      margin-top: 20px;
+    }
+    .finding {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      align-items: start;
+    }
+    .finding__left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 4px;
+    }
+    .finding__num {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+    }
+    .finding__stat-big {
+      font-family: var(--font-head);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1;
+    }
+    .finding__stat-label {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .finding__right h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .finding__right .finding__subtitle {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-style: italic;
+      color: var(--cyan);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .finding__right p {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--slate-lt);
+      line-height: 1.85;
+      margin-bottom: 16px;
+      max-width: 680px;
+    }
+    .finding__right p:last-child { margin-bottom: 0; }
+    .finding__highlight {
+      background: rgba(100,220,255,0.06);
+      border-left: 3px solid var(--cyan);
+      padding: 16px 20px;
+      margin-top: 20px;
+      border-radius: 0 8px 8px 0;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--white);
+      line-height: 1.7;
+      max-width: 640px;
+    }
+
+    /* Archetypes */
+    .archetypes__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+      max-width: 680px;
+    }
+    .archetype-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .archetype-card__pct {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .archetype-card__name {
+      font-family: var(--font-head);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .archetype-card__desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--slate-lt);
+      line-height: 1.65;
+    }
+
+    /* Benchmark table */
+    .benchmark {
+      background: var(--navy-mid);
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .benchmark__table-wrap {
+      overflow-x: auto;
+      margin-top: 40px;
+    }
+    .benchmark__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-head);
+    }
+    .benchmark__table thead tr {
+      border-bottom: 2px solid var(--cyan);
+    }
+    .benchmark__table th {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      text-align: left;
+      padding: 12px 16px 16px;
+    }
+    .benchmark__table td {
+      font-size: 15px;
+      color: var(--white);
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      line-height: 1.5;
+    }
+    .benchmark__table td:last-child {
+      font-weight: 600;
+      color: var(--cyan);
+      white-space: nowrap;
+    }
+    .benchmark__table tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* Recommendations */
+    .recs {
+      background: var(--navy);
+      padding: 100px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .recs__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .rec-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 36px 32px;
+    }
+    .rec-card__num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cyan);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .rec-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.35;
+    }
+    .rec-card p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--slate-lt);
+      line-height: 1.8;
+    }
+
+    /* Report CTA */
+    .report-cta {
+      background: linear-gradient(135deg, #0d2240 0%, var(--navy) 100%);
+      border-top: 1px solid rgba(100,220,255,0.15);
+      padding: 100px 0;
+      text-align: center;
+    }
+    .report-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .report-cta p {
+      font-family: var(--font-body);
+      font-size: 17px;
+      color: var(--slate-lt);
+      margin-bottom: 40px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.75;
+    }
+    .report-cta__btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .report-cta__cite {
+      margin-top: 48px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--slate-lt);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* Methodology */
+    .methodology {
+      background: var(--navy-mid);
+      padding: 60px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .methodology p {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--slate-lt);
+      line-height: 1.8;
+      max-width: 720px;
+    }
+    .methodology h3 {
+      font-family: var(--font-head);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .signals__grid { grid-template-columns: 1fr; }
+      .finding {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .finding__left {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .finding__stat-big { font-size: 2.2rem; }
+      .recs__grid { grid-template-columns: 1fr; }
+      .archetypes__grid { grid-template-columns: 1fr; }
+      .benchmark__table td,
+      .benchmark__table th { padding: 12px 10px; font-size: 13px; }
+    }
+    @media (max-width: 600px) {
+      .report-hero { padding: 120px 0 80px; }
+      .report-hero__meta { gap: 24px; }
+      .report-hero__ctas { flex-direction: column; }
+      .report-cta__btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="assets/mark.png" alt="" class="nav__mark" aria-hidden="true" />
+        <span class="nav__wordmark">Flashpoint <em>Global</em></span>
+      </a>
+      <div class="nav__right">
+        <a href="/" class="nav__link">Home</a>
+        <button class="btn btn--outline btn--sm" data-tf-popup="WIQuGJMo" data-tf-iframe-props="title=Flashpoint Discovery Call" data-tf-medium="snippet">Book a Discovery Call</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- HERO -->
+  <section class="report-hero">
+    <div class="container">
+      <p class="eyebrow">Q1 2026 Benchmark Report</p>
+      <h1>Founder Presence<br />in the Age of AI</h1>
+      <p class="report-hero__sub">
+        Primary research across 92 founders and startup leaders — establishing the first baseline metrics for founder presence health: the belief gap, the AI voice gap, and the narrative deficit separating market-shapers from market-followers.
+      </p>
+      <div class="report-hero__meta" aria-label="Report at a glance">
+        <div class="report-hero__meta-item">
+          <span class="report-hero__meta-num">92</span>
+          <span class="report-hero__meta-label">Founders Surveyed</span>
+        </div>
+        <div class="report-hero__meta-item">
+          <span class="report-hero__meta-num">8</span>
+          <span class="report-hero__meta-label">Key Findings</span>
+        </div>
+        <div class="report-hero__meta-item">
+          <span class="report-hero__meta-num">Q1</span>
+          <span class="report-hero__meta-label">2026 Field Period</span>
+        </div>
+        <div class="report-hero__meta-item">
+          <span class="report-hero__meta-num">15</span>
+          <span class="report-hero__meta-label">Page Full Report</span>
+        </div>
+      </div>
+      <div class="report-hero__ctas">
+        <button class="btn btn--primary" data-tf-popup="WIQuGJMo" data-tf-iframe-props="title=Flashpoint Discovery Call" data-tf-medium="snippet">
+          Download the Full Report
+        </button>
+        <a href="#findings" class="btn btn--ghost">Read the Findings ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 DEFINING SIGNALS -->
+  <section class="signals" aria-labelledby="signals-heading">
+    <div class="container">
+      <p class="signals__label" id="signals-heading">Three Defining Signals</p>
+      <div class="signals__grid">
+        <div class="signal-card">
+          <div class="signal-card__num">81.5%</div>
+          <div class="signal-card__title">AI Adoption</div>
+          <p class="signal-card__body">Founders now use AI tools to generate or edit content — making AI the default, not the exception. But adoption alone hasn't solved the core problem.</p>
+        </div>
+        <div class="signal-card">
+          <div class="signal-card__num">58.7%</div>
+          <div class="signal-card__title">The Voice Gap</div>
+          <p class="signal-card__body">Of founders report that AI-generated content doesn't sound like them, feels generic, or can't be trusted for public use. Volume is up. Voice is not.</p>
+        </div>
+        <div class="signal-card">
+          <div class="signal-card__num">32.6%</div>
+          <div class="signal-card__title">Future-Facing Narrative</div>
+          <p class="signal-card__body">Only 1 in 3 founders publishes content about where their industry is headed — the rarest and most differentiated content type on any platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDINGS -->
+  <section class="findings" id="findings" aria-labelledby="findings-heading">
+    <div class="container">
+      <div class="findings__intro">
+        <p class="eyebrow">The 8 Findings</p>
+        <h2 class="section-title" id="findings-heading">What the data actually says.</h2>
+        <p>Visibility without clarity is noise. The founders who will define their categories in 2026 are not the ones posting most — they are the ones saying something that matters. Here is what we found.</p>
+      </div>
+
+      <!-- Finding 1 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part I</span>
+          <div class="finding__stat-big">13<span style="font-size:1.6rem">pt</span></div>
+          <div class="finding__stat-label">Belief–Outcome Gap</div>
+        </div>
+        <div class="finding__right">
+          <h2>The Belief Gap</h2>
+          <p class="finding__subtitle">Founders believe. But belief alone isn't showing up.</p>
+          <p>93.5% of founders rated having a strong online presence as important (4 or 5 out of 5). The conviction is near-universal. Yet when asked whether their presence was actually driving meaningful outcomes, only 80.4% agreed — a meaningful 13-point drop.</p>
+          <p>This gap between "I know presence matters" and "my presence is actually working" is the first structural signal. The top motivations reveal something deeper: while 87.0% want to build trust and 69.6% want business growth, only 31.5% say they show up online to shape their industry's future narrative — the category-defining move that separates market-shapers from market-followers.</p>
+          <div class="finding__highlight">
+            Fewer than 1 in 3 founders names shaping the future narrative as a reason they show up online.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 2 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part II</span>
+          <div class="finding__stat-big">32.6%</div>
+          <div class="finding__stat-label">Publish future-facing content</div>
+        </div>
+        <div class="finding__right">
+          <h2>Activity Without Architecture</h2>
+          <p class="finding__subtitle">Founders are posting. But not strategically.</p>
+          <p>58.7% of founders post at least once per week — content activity looks healthy on the surface. But frequency is not strategy. The type of content reveals a significant architecture problem.</p>
+          <p>The highest-volume content types — company updates (64.1%), personal founder stories (60.9%), press mentions (50.0%) — are all retrospective or transactional. They document what has happened. The rarest content type is the most strategically valuable: a forward-facing perspective on where the industry is headed. Even among founders who post multiple times per week, only 40.7% publish future-facing content.</p>
+          <div class="finding__highlight">
+            The content that builds category authority is the rarest content type published by founders today.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 3 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part III</span>
+          <div class="finding__stat-big">58.7%</div>
+          <div class="finding__stat-label">Report an AI voice gap</div>
+        </div>
+        <div class="finding__right">
+          <h2>The AI Paradox</h2>
+          <p class="finding__subtitle">More output. Less voice.</p>
+          <p>AI adoption among founders is now the default. 81.5% use AI tools to generate or edit content — 48.9% regularly, 32.6% sometimes. Only 5.4% report no AI use at all. This is a landmark adoption curve.</p>
+          <p>But the experience data tells a more complicated story. 58.7% of founders report that AI-generated content does not sound like them, feels generic, or cannot be trusted for public use. The 39.1% who report AI both saves time and sounds like them have done something different: they've built a clear enough internal narrative that AI can serve as an accelerant, not a replacement.</p>
+          <div class="finding__highlight">
+            AI has democratized volume. It has not democratized voice. The AI Voice Gap is the defining challenge of founder presence in 2026.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 4 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part IV</span>
+          <div class="finding__stat-big">57.6%</div>
+          <div class="finding__stat-label">Cite lack of time as #1 barrier</div>
+        </div>
+        <div class="finding__right">
+          <h2>The Execution Barrier</h2>
+          <p class="finding__subtitle">Time is a symptom. Clarity is the cause.</p>
+          <p>When founders explain why they struggle with content, time dominates the surface answer at 57.6%. But beneath the time problem is a clarity problem: 34.8% struggle to turn ideas into content, 29.3% find content feels generic or forced, and 22.8% don't feel their content is strategic or high-impact.</p>
+          <p>These are not time issues — they are voice and positioning issues. When a founder hasn't defined their point of view, every piece of content requires building from scratch. There is no strategic core to pull from. AI can generate paragraphs in seconds, but if the founder hasn't articulated a distinct perspective, those paragraphs are unmoored.</p>
+          <div class="finding__highlight">
+            Time is the stated barrier. Clarity is the actual one. Founders without a defined POV are always starting from zero.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 5 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part V</span>
+          <div class="finding__stat-big">88%</div>
+          <div class="finding__stat-label">Primary platform: LinkedIn</div>
+        </div>
+        <div class="finding__right">
+          <h2>Where Founders Live</h2>
+          <p class="finding__subtitle">LinkedIn dominates. Everything else is marginal.</p>
+          <p>Platform distribution is highly concentrated: 88.0% of founders name LinkedIn as their primary platform. Instagram follows at 31.5%, with newsletter/blog at 16.3%, X at 10.9%, and YouTube at 9.8%.</p>
+          <p>The opportunity hidden inside these numbers: only 1% of LinkedIn users post regularly — meaning consistent founders face far less competition than the platform's scale implies. The newsletter/blog segment (16.3%) is strategically underutilized. Long-form owned media is where founders can develop the depth of perspective that LinkedIn posts can only signal. The founders building owned audiences today through depth will own categories in 2027.</p>
+          <div class="finding__highlight">
+            Consistent founders on LinkedIn compete with far fewer people than the platform's size suggests. The arena is less crowded than it looks.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 6 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part VI</span>
+          <div class="finding__stat-big">4</div>
+          <div class="finding__stat-label">Distinct founder archetypes</div>
+        </div>
+        <div class="finding__right">
+          <h2>Founder Archetypes</h2>
+          <p class="finding__subtitle">Four patterns emerge across the cohort.</p>
+          <div class="archetypes__grid">
+            <div class="archetype-card">
+              <div class="archetype-card__pct">35.9%</div>
+              <div class="archetype-card__name">The Active Broadcaster</div>
+              <p class="archetype-card__desc">Posts multiple times per week. High AI usage. Voice mismatch is common. The gap is clarity, not output.</p>
+            </div>
+            <div class="archetype-card">
+              <div class="archetype-card__pct">22.8%</div>
+              <div class="archetype-card__name">The Consistent Sharer</div>
+              <p class="archetype-card__desc">Posts weekly, primarily on LinkedIn. Credible but rarely future-defining. Most to gain from sharper narrative positioning.</p>
+            </div>
+            <div class="archetype-card">
+              <div class="archetype-card__pct">30.4%</div>
+              <div class="archetype-card__name">The Occasional Poster</div>
+              <p class="archetype-card__desc">Active a few times per month. Often lacks time, ideas, or strategic direction. AI not yet integrated into a workflow.</p>
+            </div>
+            <div class="archetype-card">
+              <div class="archetype-card__pct">10.9%</div>
+              <div class="archetype-card__name">The Dormant Founder</div>
+              <p class="archetype-card__desc">Rarely posts despite believing presence is important. The intention-action gap is largest here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 7 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part VII</span>
+          <div class="finding__stat-big">67%</div>
+          <div class="finding__stat-label">Of founders have left this territory unclaimed</div>
+        </div>
+        <div class="finding__right">
+          <h2>The Narrative Deficit</h2>
+          <p class="finding__subtitle">The rarest signal is the most valuable one.</p>
+          <p>The most striking finding in this survey is the gap between narrative ambition and narrative execution. 31.5% of founders say their goal is to shape their industry's future narrative. 32.6% actually publish content about where their industry is headed. These numbers are nearly identical — meaning the founders who want to be category-definers are largely the same founders already attempting forward-facing content.</p>
+          <p>The gap is not in aspiration. It is in the remaining 67–68% who are neither aiming for nor publishing this kind of perspective. As AI content floods every platform, the signal that breaks through is not polish or production quality — it is perspective.</p>
+          <div class="finding__highlight">
+            Founders who consistently articulate a future-facing perspective occupy territory that 67% of their peers have left unclaimed.
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 8 -->
+      <div class="finding">
+        <div class="finding__left">
+          <span class="finding__num">Part VIII</span>
+          <div class="finding__stat-big">2026</div>
+          <div class="finding__stat-label">Baseline established</div>
+        </div>
+        <div class="finding__right">
+          <h2>The 2026 Benchmark</h2>
+          <p class="finding__subtitle">Baseline metrics for founder presence health — tracked year over year.</p>
+          <p>These benchmarks establish the baseline for tracking founder presence health in the AI era. Use them to understand where you stand relative to your peers — and where the opportunity lies.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BENCHMARK TABLE -->
+  <section class="benchmark" aria-labelledby="benchmark-heading">
+    <div class="container">
+      <p class="eyebrow">The 2026 Benchmark</p>
+      <h2 class="section-title" id="benchmark-heading">Where founders stand today.</h2>
+      <div class="benchmark__table-wrap">
+        <table class="benchmark__table">
+          <thead>
+            <tr>
+              <th scope="col">Metric</th>
+              <th scope="col">2026 Benchmark</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Believe presence is important (4–5 out of 5)</td><td>93.5%</td></tr>
+            <tr><td>Believe presence drives outcomes (4–5 out of 5)</td><td>80.4%</td></tr>
+            <tr><td>Post at least weekly</td><td>58.7%</td></tr>
+            <tr><td>Post multiple times per week</td><td>35.9%</td></tr>
+            <tr><td>Any AI adoption for content</td><td>81.5%</td></tr>
+            <tr><td>Regular AI use</td><td>48.9%</td></tr>
+            <tr><td>AI voice alignment — "sounds like me"</td><td>39.1%</td></tr>
+            <tr><td>AI voice gap — doesn't sound like me or feels generic</td><td>58.7%</td></tr>
+            <tr><td>Publishing future-facing narrative content</td><td>32.6%</td></tr>
+            <tr><td>Goal: shape industry's future narrative</td><td>31.5%</td></tr>
+            <tr><td>Primary platform: LinkedIn</td><td>88.0%</td></tr>
+            <tr><td>Top barrier: Lack of time</td><td>57.6%</td></tr>
+            <tr><td>Secondary barrier: Ideas → content gap</td><td>34.8%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="recs" aria-labelledby="recs-heading">
+    <div class="container">
+      <p class="eyebrow">Implications &amp; Recommendations</p>
+      <h2 class="section-title" id="recs-heading">What founders should do next.</h2>
+      <div class="recs__grid">
+        <div class="rec-card">
+          <div class="rec-card__num">01</div>
+          <h3>Clarify before you create.</h3>
+          <p>AI efficiency is only as powerful as the clarity it serves. Before using any tool to generate content, invest in defining your point of view: What future are you building toward? What does your industry get wrong? What do you know that others don't? This narrative core is the foundation that makes every piece of content strategically coherent.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-card__num">02</div>
+          <h3>Make future-facing content non-negotiable.</h3>
+          <p>Company updates and press mentions are table stakes. The content that builds category authority is the kind that defines where the world is going — and positions you as the person who sees it first. Aim for at least 30% of your content to be forward-defining perspective.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-card__num">03</div>
+          <h3>Audit your AI output for voice.</h3>
+          <p>If 58.7% of founders report a voice gap, the answer is not to abandon AI — it is to build the training inputs that close that gap. Feed AI your best long-form writing, your verbatim language, your strongest POV statements. AI should sound like you because you've taught it what you sound like.</p>
+        </div>
+        <div class="rec-card">
+          <div class="rec-card__num">04</div>
+          <h3>Invest in owned long-form channels.</h3>
+          <p>LinkedIn is the right arena, but newsletters and long-form writing are where your perspective compounds. The founders who will own categories in 2027 are building owned audiences today through depth, not just frequency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="report-cta" aria-labelledby="cta-heading">
+    <div class="container">
+      <p class="eyebrow">Get the Full Report</p>
+      <h2 id="cta-heading">15 pages. All the data.<br />Yours free.</h2>
+      <p>The complete Founder Presence in the Age of AI report includes the full benchmark table, methodology, respondent profiles, and the complete data behind every finding on this page.</p>
+      <div class="report-cta__btns">
+        <button class="btn btn--primary" data-tf-popup="WIQuGJMo" data-tf-iframe-props="title=Flashpoint Discovery Call" data-tf-medium="snippet">
+          Download the Full Report
+        </button>
+        <a href="/" class="btn btn--ghost">Back to Flashpoint Global</a>
+      </div>
+      <p class="report-cta__cite">
+        Suggested citation: Flashpoint Global. (2026). <em>Founder Presence in the Age of AI: Q1 2026 Benchmark Report.</em><br />
+        Press &amp; data licensing: <a href="mailto:info@flashpoint.global" style="color:var(--cyan);">info@flashpoint.global</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="methodology">
+    <div class="container">
+      <h3>Methodology Note</h3>
+      <p>This study was conducted by Flashpoint Global between January and April 2026. 96 total survey responses were collected; 92 completed responses were included in the analysis. The survey was distributed via direct email outreach sequences to founders and startup ecosystem networks. All data is self-reported. Given the sample size of 92 completed responses, findings are directional rather than statistically representative of the global founder population, and should be interpreted as an inaugural benchmark to be validated and expanded in subsequent years.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/mark.png" alt="" class="footer__mark" aria-hidden="true" />
+        <span class="footer__wordmark">Flashpoint <em>Global</em></span>
+      </div>
+      <p class="footer__tagline">Turning founder signal into capital, customers, and category leadership.</p>
+      <div class="footer__links">
+        <a href="mailto:info@flashpoint.global">info@flashpoint.global</a>
+        <a href="https://flashpoint.global">flashpoint.global</a>
+      </div>
+      <p class="footer__copy">© 2026 Flashpoint Global. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=7"></script>
+  <script src="https://embed.typeform.com/next/embed.js"></script>
+</body>
+</html>
